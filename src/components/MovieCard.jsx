@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function MovieCard({ id, titulo, imagem_destaque }) {
+export default function MovieCard({ id, title, poster_path }) {
     return (
         <div className="
             h-64 w-40 
@@ -12,11 +12,11 @@ export default function MovieCard({ id, titulo, imagem_destaque }) {
         ">
             
             <img 
-                src={imagem_destaque} 
-                alt={titulo} 
+                src={`https://image.tmdb.org/t/p/w1280${poster_path}`} 
+                alt={title} 
                 className="h-40 w-full object-cover" 
             />
-            <h2 className="text-xs text-center">{titulo}</h2>
+            <h2 className="text-xs text-center">{title}</h2>
             <Link to={`/movies/${id}`} className="text-blue-500 mt-2">Saber mais</Link>
         </div>
     );
