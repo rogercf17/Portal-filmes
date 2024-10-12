@@ -8,7 +8,8 @@
     "genero": "Ficção Científica",
     "diretor": "Christopher Nolan",
     "avaliacao": 8.8,
-    "imagem_destaque": "inception.jpg"
+    "imagem_destaque": "inception.jpg",
+    "elenco": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page", "Tom Hardy", "Ken Watanabe", "Cillian Murphy"]
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "genero": "Ação",
     "diretor": "Christopher Nolan",
     "avaliacao": 9.0,
-    "imagem_destaque": "dark_knight.jpg"
+    "imagem_destaque": "dark_knight.jpg",
+    "elenco": ["Christian Bale", "Heath Ledger", "Aaron Eckhart", "Michael Caine", "Maggie Gyllenhaal", "Gary Oldman"]
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "genero": "Ficção Científica",
     "diretor": "Christopher Nolan",
     "avaliacao": 8.6,
-    "imagem_destaque": "interstellar.jpg"
+    "imagem_destaque": "interstellar.jpg",
+    "elenco": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine", "Matt Damon", "Mackenzie Foy"]
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "genero": "Drama",
     "diretor": "Bong Joon Ho",
     "avaliacao": 8.6,
-    "imagem_destaque": "parasite.jpg"
+    "imagem_destaque": "parasite.jpg",
+    "elenco": ["Song Kang-ho", "Lee Sun-kyun", "Cho Yeo-jeong", "Choi Woo-shik", "Park So-dam", "Lee Jung-eun"]
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "genero": "Ficção Científica",
     "diretor": "Lana Wachowski, Lilly Wachowski",
     "avaliacao": 8.7,
-    "imagem_destaque": "matrix.jpg"
+    "imagem_destaque": "matrix.jpg",
+    "elenco": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss", "Hugo Weaving", "Joe Pantoliano", "Gloria Foster"]
   },
   {
     "id": 6,
@@ -63,18 +68,20 @@
     "genero": "Crime",
     "diretor": "Quentin Tarantino",
     "avaliacao": 8.9,
-    "imagem_destaque": "pulp_fiction.jpg"
+    "imagem_destaque": "pulp_fiction.jpg",
+    "elenco": ["John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis", "Ving Rhames", "Tim Roth"]
   },
   {
     "id": 7,
-    "titulo": "The Shawshank Redemption",
+    "titulo": "Shawshank Redemption",
     "descricao": "Um homem condenado à prisão perpétua encontra redenção e amizade ao longo de duas décadas.",
     "sinopse": "Andy Dufresne, um banqueiro condenado injustamente por assassinato, cumpre uma sentença de prisão perpétua na penitenciária de Shawshank. Ao longo dos anos, ele cria uma amizade com outro prisioneiro, Red, e encontra formas inesperadas de sobrevivência e redenção.",
     "ano_lancamento": 1994,
     "genero": "Drama",
     "diretor": "Frank Darabont",
     "avaliacao": 9.3,
-    "imagem_destaque": "shawshank_redemption.jpg"
+    "imagem_destaque": "shawshank_redemption.jpg",
+    "elenco": ["Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler", "Clancy Brown", "Gil Bellows"]
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@
     "genero": "Crime",
     "diretor": "Francis Ford Coppola",
     "avaliacao": 9.2,
-    "imagem_destaque": "godfather.jpg"
+    "imagem_destaque": "godfather.jpg",
+    "elenco": ["Marlon Brando", "Al Pacino", "James Caan", "Richard S. Castellano", "Robert Duvall", "Sterling Hayden"]
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@
     "genero": "Drama",
     "diretor": "David Fincher",
     "avaliacao": 8.8,
-    "imagem_destaque": "fight_club.jpg"
+    "imagem_destaque": "fight_club.jpg",
+    "elenco": ["Edward Norton", "Brad Pitt", "Helena Bonham Carter", "Meat Loaf", "Jared Leto", "Zach Grenier"]
   },
   {
     "id": 10,
@@ -107,6 +116,7 @@
     "genero": "Drama",
     "diretor": "Robert Zemeckis",
     "avaliacao": 8.8,
-    "imagem_destaque": "forrest_gump.jpg"
+    "imagem_destaque": "forrest_gump.jpg",
+    "elenco": ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field", "Mykelti Williamson", "Haley Joel Osment"]
   }
 ]
