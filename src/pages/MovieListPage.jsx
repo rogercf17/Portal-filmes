@@ -19,7 +19,6 @@ export default function MovieListPage() {
 
     const handleSearch = (event) => {
         setSearch(event.target.value)
-        console.log(search)
     }
 
     const filmesFiltrados = filmes.filter(filme => filme.title.toLowerCase().includes(search.toLowerCase()))
@@ -29,22 +28,19 @@ export default function MovieListPage() {
             <h2 className="mt-4">Veja o catálogo completo de filmes</h2>
             <input
                 className="text-black mb-2 rounded-md pl-2"
-                type="search"
+                type="text"
                 id="search"
                 value={search}
                 onChange={handleSearch}
             />
             <section className="grid grid-cols-5 gap-x-10">
-                {
-                    filmesFiltrados.length > 0 
-                        ?
-                        filmes
-                            .map(filme => (
-                                <MovieCard key={filme.id} {...filme} />
-                            ))
-                        :
-                        <p>Filme não encontrado</p>
-                }
+            {filmesFiltrados.length > 0 ? (
+                filmesFiltrados.map(filme => (
+                    <MovieCard key={filme.id} {...filme} />
+                ))
+                ) : (
+                <p>Nenhum filme encontrado</p>
+            )}
             </section>
         </div>
     )

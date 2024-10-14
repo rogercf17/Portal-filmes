@@ -16,7 +16,7 @@ export default function Contato() {
     }
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4">
             <form onSubmit={handleSubmit} className="flex flex-col w-2/4">
                 <label htmlFor="nome">Nome:</label>
                 <input
