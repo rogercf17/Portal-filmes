@@ -14,10 +14,10 @@ export default function MyList() {
     }, []);
 
     useEffect(() => {
-        // Salvar as listas no LocalStorage sempre que forem atualizadas
-        localStorage.setItem('watchedMovies', JSON.stringify(watchedMovies));
-        localStorage.setItem('watchLaterMovies', JSON.stringify(watchLaterMovies));
-    }, [watchedMovies, watchLaterMovies]);
+        const storedWatchLaterMovies = JSON.parse(localStorage.getItem('watchLaterMovies')) || []
+        setWatchLaterMovies(storedWatchLaterMovies)
+        console.log('Filmes para ver depois carregados:', storedWatchLaterMovies) // Debug
+    }, [])
 
     const addToWatched = (movie) => {
         setWatchedMovies(prevMovies => [...prevMovies, movie]);
@@ -39,19 +39,25 @@ export default function MyList() {
 
     const MovieList = ({ movies, title, listType }) => (
         <div>
-            <h2>{title}</h2>
+            <h2 className='text-center text-xl font-bold mb-2'>{title}</h2>
             {movies.length === 0 ? (
                 <p>Nenhum filme na lista.</p>
             ) : (
-                <ul>
+                <ul className='flex flex-col gap-2'>
                     {movies.map(movie => (
-                        <li key={movie.id}>
-                            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-                            <button onClick={() => removeMovie(movie.id, listType)}>Remover</button>
+                        <li key={movie.id} className='
+                            w-full h-auto 
+                            bg-zinc-950
+                            flex flex-col
+                            p-2
+                            gap-1
+                        '>
+                            <Link to={`/movies/${movie.id}`} className='text-sm'>{movie.title}</Link>
+                            <button onClick={() => removeMovie(movie.id, listType)} className='bg-red-700 w-2/4 self-center rounded-sm text-xs'>Remover</button>
                             {listType === 'watched' ? (
-                                <button onClick={() => addToWatchLater(movie)}>Mover para Ver Depois</button>
+                                <button onClick={() => addToWatchLater(movie)} className='bg-blue-700 w-2/4 self-center rounded-sm text-xs'>Mover para Ver Depois</button>
                             ) : (
-                                <button onClick={() => addToWatched(movie)}>Marcar como Assistido</button>
+                                <button onClick={() => addToWatched(movie)} className='bg-blue-700 w-2/4 self-center rounded-sm text-xs'>Marcar como Assistido</button>
                             )}
                         </li>
                     ))}
@@ -61,10 +67,12 @@ export default function MyList() {
     );
 
     return (
-        <div>
-            <h1>Minha Lista</h1>
-            <MovieList movies={watchedMovies} title="Filmes Assistidos" listType="watched" />
-            <MovieList movies={watchLaterMovies} title="Filmes para Ver Depois" listType="watchLater" />
+        <div className='flex flex-col justify-center items-center gap-2'>
+            <h1 className='text-2xl'>Minha Lista</h1>
+            <div className='flex justify-around w-full'>
+                <MovieList movies={watchedMovies} title="Filmes Assistidos" listType="watched" />
+                <MovieList movies={watchLaterMovies} title="Filmes para Ver Depois" listType="watchLater" />
+            </div>
         </div>
     );
 }
